@@ -1,0 +1,22 @@
+{
+  "name": "e2e_kajima",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:dev": "mocha --no-timeouts --reporter mochawesome --reporter-options reportDir=C:/Users/deast/Work/Upbond/upbond_DJ/e2e_kajima/report_result/login_dev --overwrite=true",
+    "test:prod": "mocha --no-timeouts --reporter mochawesome --reporter-options reportDir=C:/Users/deast/Work/Upbond/upbond_DJ/e2e_kajima/report_result/login_prod --overwrite=true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "assert": "^2.1.0",
+    "chai": "^5.1.1",
+    "chromedriver": "^131.0.1",
+    "geckodriver": "^4.4.1",
+    "mocha": "^10.5.2",
+    "mochawesome": "^7.1.3",
+    "selenium-webdriver": "^4.26.0"
+  }
+}

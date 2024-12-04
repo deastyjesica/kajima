@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 2,
+    "failures": 0,
+    "start": "2024-12-04T06:47:21.887Z",
+    "end": "2024-12-04T06:47:53.179Z",
+    "duration": 31292,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 66.66666666666666,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e73b28be-cf30-4821-bd8c-8b1c5db0d616",
+      "title": "",
+      "fullFile": "C:\\Users\\deast\\Work\\Upbond\\upbond_DJ\\e2e_kajima\\test\\login_dev.js",
+      "file": "\\login_dev.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd1c289b-0803-471d-91d4-2e37e79da248",
+          "title": "E2E UPBOND Kajima DEV",
+          "fullFile": "C:\\Users\\deast\\Work\\Upbond\\upbond_DJ\\e2e_kajima\\test\\login_dev.js",
+          "file": "\\login_dev.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "01. Login Existing User & Check Dashboard",
+              "fullTitle": "E2E UPBOND Kajima DEV 01. Login Existing User & Check Dashboard",
+              "timedOut": false,
+              "duration": 31284,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const chai = await import('chai');\nchai.should();\nlet driver = await new Builder().forBrowser('chrome').build();\n//https://dev.kjm-gohey.jp/?site_id=4d5710c4-3df1-4693-b3ac-19bfdc2b783a\nawait driver.get('https://dev.kjm-gohey.jp/');\nawait driver.manage().window().maximize();\nawait driver.sleep(10000);\nawait driver.findElement(By.xpath(\"//button[contains(@class,'rounded-lg bg-[#002076] px-4 py-2 text-white')]\")).click();\nawait driver.sleep(500);\nawait driver.findElement(By.xpath(\"//span[@class='btn-social__text new-style-button-text']\")).click();\nawait driver.wait(until.elementLocated(By.xpath('//div/input[@type=\"text\" and @placeholder=\"Email address\"]')), 500);\nawait driver.findElement(By.xpath('//div/input[@type=\"text\" and @placeholder=\"Email address\"]')).sendKeys(credentials.USRLINE_juwita);\nawait driver.sleep(500);\nawait driver.findElement(By.xpath(\"//input[@name='tpasswd']\")).sendKeys(credentials.PWDLINE);\nawait driver.sleep(500);\nawait driver.findElement(By.xpath(\"//button[@type='submit']\")).click();\nawait driver.sleep(8000);\nawait driver.wait(until.elementLocated(By.xpath('//p[text()=\"現在の保有ポイント\"]')), 10000);\n\n// //checking siteID\n// await driver.wait(until.elementLocated(By.xpath('//p[text()=\"学校法人兵庫医科大学　新病院棟（仮称）新築工事\"]')));\n// //await driver.quit();\n// //Go to Mission\n// await driver.findElement(By.xpath('//a[@href=\"/missions\"]')).click();\n// //await driver.wait(until.elementLocated(By.xpath(\"//div[@class='flex h-[80px] flex-col items-center justify-center bg-[#002076] pt-1']\"))).click();\n// await driver.sleep(500);\n// // Go to Gacha\n// await driver.findElement(By.xpath('//a[@href=\"/gacha\"]')).click();\n// await driver.sleep(500);\n// let gachascroll = await driver.findElement(By.xpath('//span[text()=\"ガチャを回す\"]'));\n// await driver.executeScript(\"arguments[0].scrollIntoView(true);\", gachascroll); \n// //await driver.executeScript(driver.findElement(By.xpath('//span[text()=\"ガチャを回す\"]')).click());\nawait driver.sleep(500);\nawait driver.quit();",
+              "err": {},
+              "uuid": "4073f5a2-6841-429c-b1e8-2d86a375b72a",
+              "parentUUID": "cd1c289b-0803-471d-91d4-2e37e79da248",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "02. Go to Mission",
+              "fullTitle": "E2E UPBOND Kajima DEV 02. Go to Mission",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f3a79b2e-14c6-4ae5-9ede-9805a45b145d",
+              "parentUUID": "cd1c289b-0803-471d-91d4-2e37e79da248",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "03. Go to Mission",
+              "fullTitle": "E2E UPBOND Kajima DEV 03. Go to Mission",
+              "timedOut": false,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "c9851273-fa95-4240-85b6-f0967a54a49e",
+              "parentUUID": "cd1c289b-0803-471d-91d4-2e37e79da248",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4073f5a2-6841-429c-b1e8-2d86a375b72a"
+          ],
+          "failures": [],
+          "pending": [
+            "f3a79b2e-14c6-4ae5-9ede-9805a45b145d",
+            "c9851273-fa95-4240-85b6-f0967a54a49e"
+          ],
+          "skipped": [],
+          "duration": 31284,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.5.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "C:/Users/deast/Work/Upbond/upbond_DJ/e2e_kajima/report_result/login_dev"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
